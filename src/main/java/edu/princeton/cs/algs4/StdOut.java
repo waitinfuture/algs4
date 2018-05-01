@@ -12,6 +12,7 @@ package edu.princeton.cs.algs4;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -279,6 +280,30 @@ public final class StdOut {
     public static void print(byte x) {
         out.print(x);
         out.flush();
+    }
+
+    public static void println(int[] arr, int size) {
+        for (int i = 0; i < size; i++) {
+            print(arr[i]);
+            print("\t");
+        }
+        println();
+    }
+
+    public static void println(double[] arr, int size) {
+        for (int i = 0; i < size; i++) {
+            printf("%.2f", arr[i]);
+            print("\t");
+        }
+        println();
+    }
+
+    public static void pirntln(List list) {
+        for (int i = 0; i < list.size(); i++) {
+            printf("%.2f", list.get(i));
+            print("\t");
+        }
+        println();
     }
 
    /**
